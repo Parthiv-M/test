@@ -5,9 +5,7 @@ const port = process.env.PORT || 3001;
 
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => {
-    res.send({message: "hello"})
-})
+app.use("/api/test", require("./api/test"))
 
 // listens to the app on PORT
 app.listen(port, () => {
